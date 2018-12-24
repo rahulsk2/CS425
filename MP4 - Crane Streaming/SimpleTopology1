@@ -1,0 +1,22 @@
+{
+  "topology_nodes": [
+    {
+          "ID" : 1,
+          "OpType" : "SPOUT",
+          "FileToExecute" : "Methods.py",
+          "InputBolts" : [],
+          "OutputBolts" : [2],
+          "MethodToExecute" : 0,
+          "FileIO" : "InputAlphabets.txt"
+    },
+    {
+          "ID" : 2,
+          "OpType" : "SINK",
+          "FileToExecute" : "Methods.py",
+          "InputBolts" : [1],
+          "OutputBolts" : [],
+          "MethodToExecute" : -1,
+          "FileIO" : "OutputAlphabets.txt"
+    }
+  ]
+}

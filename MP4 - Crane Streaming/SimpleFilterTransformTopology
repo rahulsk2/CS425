@@ -1,0 +1,40 @@
+{
+  "topology_nodes": [
+    {
+          "ID" : 1,
+          "OpType" : "SPOUT",
+          "FileToExecute" : "Methods.py",
+          "InputBolts" : [],
+          "OutputBolts" : [2, 3],
+          "MethodToExecute" : 0,
+          "FileIO" : "Alphabets_50k"
+    },
+    {
+          "ID" : 2,
+          "OpType" : "FILTER",
+          "FileToExecute" : "Methods.py",
+          "InputBolts" : [1],
+          "OutputBolts" : [4],
+          "MethodToExecute" : 4,
+          "FileIO" : ""
+    },
+    {
+          "ID" : 3,
+          "OpType" : "TRANSFORM",
+          "FileToExecute" : "Methods.py",
+          "InputBolts" : [1],
+          "OutputBolts" : [4],
+          "MethodToExecute" : 3,
+          "FileIO" : "InputAlphabets.txt"
+    },
+    {
+          "ID" : 4,
+          "OpType" : "SINK",
+          "FileToExecute" : "Methods.py",
+          "InputBolts" : [2, 3],
+          "OutputBolts" : [],
+          "MethodToExecute" : -1,
+          "FileIO" : "OFT_50k.txt"
+    }
+  ]
+}

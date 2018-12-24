@@ -1,0 +1,40 @@
+{
+  "topology_nodes": [
+    {
+          "ID" : 1,
+          "OpType" : "SPOUT",
+          "FileToExecute" : "Methods.py",
+          "InputBolts" : [],
+          "OutputBolts" : [3],
+          "MethodToExecute" : -1,
+          "FileIO" : "Fruits_100k"
+    },
+    {
+          "ID" : 2,
+          "OpType" : "SPOUT",
+          "FileToExecute" : "Methods.py",
+          "InputBolts" : [],
+          "OutputBolts" : [3],
+          "MethodToExecute" : -1,
+          "FileIO" : "Colors_200k"
+    },
+    {
+          "ID" : 3,
+          "OpType" : "TRANSFORM",
+          "FileToExecute" : "Methods.py",
+          "InputBolts" : [1, 2],
+          "OutputBolts" : [4],
+          "MethodToExecute" : 1,
+          "FileIO" : ""
+    },
+    {
+          "ID" : 4,
+          "OpType" : "SINK",
+          "FileToExecute" : "Methods.py",
+          "InputBolts" : [3],
+          "OutputBolts" : [],
+          "MethodToExecute" : -1,
+          "FileIO" : "FruitsAndColors_WordCounter.txt"
+    }
+  ]
+}
